@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const obj = {
+      uname: 'balck',
+      age: 18,
+      gender: '女'
+    }
+    localStorage.setItem('obj', JSON.stringify(obj))
+      // JSON对象 属性和值有引号，而且引号统一是双引号
+    console.log(JSON.parse(localStorage.getItem('obj')))
+  </script>
+</body>
+
+</html>

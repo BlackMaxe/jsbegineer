@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.求最大值函数
+    function getMax(x, y) {
+      return x > y ? x : y
+    }
+    let max = getMax(2, 5)
+    console.log(max)
+
+    // 2. 求任意数组的最大值
+    function getArrMax1(arr = []) {
+      let max = arr[0]
+      let min = arr[0]
+      for (let i = 1; i < arr.length; i++) {
+        if (max < arr[i]) {
+          max = arr[i]
+        }
+        if (min > arr[i]) {
+          min = arr[i]
+        }
+      }
+      // 返回值返回的是数组
+      return [max, min]
+    }
+    let max1 = getArrMax1([1, 2, 3, 4, 5])
+    console.log(`数组的最大值是：${getArrMax1[0]}`)
+    console.log(`数组的最小值是：${getArrMax1[1]}`)
+  </script>
+</body>
+
+</html>

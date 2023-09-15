@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 退出循环
+    // continue 退出本次循环,一般用于排除或者跳过某一个选项的时候,可以使用continue
+    // break 退出整个for循环,一般用于结果已经得到,后续的循环不需要的时候可以使用
+
+    // for (let i = 1; i <= 5; i++) {
+    //     if (i === 3) {
+    //         continue //遇到continue 本次循环中下列的代码不执行类似于doc
+    //     }
+    //     document.write(i)
+    // }
+
+    for (let i = 1; i <= 5; i++) {
+      if (i === 3) {
+        break //退出整个循环  结束循环
+      }
+      document.write(i)
+    }
+
+    // 了解:
+    // 1.while(true)来构造“无限”循环，需要使用break退出循环
+    // 2.for(;;)也可以来构造“无限”循环，同样需要使用break退出循环
+    // for (;;) {
+    //     console.log(11);//他没有开始也没有结束
+    // }
+
+    // for循环和while循环有什么区别呢
+    // 当如果明确了循环的次数的时候推荐使用for循环
+    // 当不明确循环的次数的时候推荐使用while循环
+  </script>
+</body>
+
+</html>

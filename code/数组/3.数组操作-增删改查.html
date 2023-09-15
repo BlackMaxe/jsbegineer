@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 操作数组
+    // 数组本质是数据集合，操作数据无非就是 增删改查 语法
+
+    // 查  查询数组数据
+    // 数组[下标]
+    // 或者我们称为访问数组数据
+
+    // 改  重新赋值
+    // 数组[下标]= 新值
+
+    // 增  数组添加新的数据
+    // arr.push(新增的内容)
+    // arr.unshift(新增的内容)
+
+    // 删  删除数组中数据
+    // arr.pop()
+    // arr.shift()
+    // arr.splice(操作的下标,删除的个数)
+
+    // 改
+    // let arr = []
+    // console.log(arr)
+    //     // console.log(arr[0]) //undefined
+    // arr[0] = 1
+    // arr[1] = 5
+    // console.log(arr)
+    // let arr = ['pink', 'red', 'green']
+    //修改
+    // arr[0] = 'hotpink'
+    // console.log(arr)
+
+    //给所有的数据元素后面加个老师  修改
+    // let arr = ['pink', 'red', 'green']
+    // for (let i = 0; i < arr.length; i++) {
+    //     arr[i] += '老师'
+    // }
+    // console.log(arr)
+
+    // 增
+    // 目标:掌握利用push向数组添加元素(数据)
+    // 数组.push()方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度(重点)
+    // 语法：
+    // arr.push(元素1,,...,元素n)
+    // 例如：
+
+    // let arr = ['red', 'green']
+    // arr.push('pink')
+    // console.log(arr) //['red', 'green','pink']
+
+    // let arr = ['red', 'green']
+    // console.log(arr.push('pink')) // 3  打印出来的新增后的长度
+
+    // arr.unshift(新增的内容)方法将一个或多个元素添加到数组的开头，并返回该数组的新长度
+
+    // 删
+    // 目标:能够删除数组元素(数据)
+    // 数组.pop() 方法从数组中删除最后一个元素，并返回该元素的值
+    // 语法:
+    //     arr.pop()
+    // 例如：
+    // let arr = ['red', 'green']
+    // arr.pop()
+    // console.log(arr) // ['red']
+
+    // let arr = ['red', 'green', 'blue']
+    // console.log(arr.pop()) // blue  显示出来删除的内容是什么
+
+    // 数组.shift() 方法从数组中删除第一个元素，并返回该元素的值
+    // let arr = ['red', 'green', 'blue']
+    // arr.shift()
+    // console.log(arr) // ['green', 'blue']
+
+    // 数组splice()方法 除指定元素   !!!!
+    // 语法:
+    // arr.splice(start, deleteCount)
+    // arr.splice(起始位置-索引号, 删除几个元素)
+    // let arr = ['red', 'green', 'blue']
+    // arr.splice(1, 1)//这句代码的意思是从索引号1的位置开始删除一个
+    // console.log(arr) //['red', 'blue']
+  </script>
+</body>
+
+</html>

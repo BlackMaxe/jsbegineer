@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 1100px;
+      height: 1100px;
+      background-color: #ccc;
+      background-image: url(./images/1.webp);
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    const div = document.querySelector('div')
+      // div.style.width = '400px'
+      //   //有连接号的用小驼峰命名法
+      // div.style.backgroundColor = 'pink'
+    function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }
+    const random = getRandom(1, 6)
+    div.style.backgroundImage = `url(./images/${random}.webp) `
+  </script>
+</body>
+
+</html>

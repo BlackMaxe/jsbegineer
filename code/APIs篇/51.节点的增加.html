@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>我是老大</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <script>
+    // 目标：能够具备根据需求新增节点的能力
+    // 很多情况下，我们需要在页面中增加元素
+    //  比如，点击发布按钮，可以新增一条信息
+    //  一般情况下，我们新增节点，按照如下操作:
+    // 创建一个新的节点
+    //  把创建的新的节点放入到指定的元素内部
+    // 学习路线:
+    //  创建节点
+    //  追加节点
+
+    // 创建节点
+    // 即创造出一个新的网页元素，再添加到网页内，一般先创建节点，然后插入节点
+    // 创建元素节点方法：
+    // document.createElement('标签名')
+    const div = document.createElement('div')
+    console.log(div)
+
+    // 追加节点
+    // 想要在界面看到，还得插入到某个父元素中
+
+    // 插入到父元素的最后一个子元素：
+    // 插入到这个父元素的最后
+    // 父元素.appendChild(要插入的元素)
+
+    // 插入到父元素中某个子元素的前面
+    // 父元素.insertBefore(要插入的元素, 在哪个元素前面)
+
+    const ul = document.querySelector('ul')
+    const li = document.createElement('li')
+    li.innerHTML = '我是li'
+      // ul.appendChild(li)
+    ul.insertBefore(li, ul.children[0]) //永远在头部插入
+
+    // 特殊情况下，我们新增节点，按照如下操作
+    // 复制一个原有的节点
+    // 把复制的节点放入到指定的元素内部
+    // 克隆节点
+    //  克隆一个已有的元素节点
+    // 元素.cloneNode(布尔值)
+    // cloneNode会克降出一个跟原标签一样的元素，括号内传入布尔值
+    // 若为true，则代表克隆时会包含后代节点一起克隆
+    // 若为false，则代表克隆时不包含后代节点 只有标签名
+    // 默认为false
+    // const li1 = ul.children[2].cloneNode(true)
+    // ul.appendChild(li1)
+    ul.appendChild(ul.children[2].cloneNode(true))
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>第1个孩子</li>
+    <li>第2个孩子</li>
+    <li>第3个孩子</li>
+    <li>第4个孩子</li>
+    <li>第5个孩子</li>
+    <p>我不变色</p>
+  </ul>
+  <script>
+    // 两种注册事件的区别
+
+    // 传统on注册 (L0)
+    // 同一个对象,后面注册的事件会覆盖前面注册(同一个事件)
+    // 直接使用null覆盖偶就可以实现事件的解绑
+    // 都是冒泡阶段执行的
+
+    // 事件监听注册(L2)
+    // 语法:addEventListener(事件类型,事件处理函数,是否使用捕获)
+    // 后面注册的事件不会覆盖前面注册的事件(同一个事件)
+    // 可以通过第三个参数去确定是在冒泡或者捕获阶段执行
+    // 必须使用removeEventListener(事件类型,事件处理函数,获取捕获或者冒泡阶段)
+    // 匿名函数无法被解绑
+
+    const ul = document.querySelector('ul')
+    ul.addEventListener('click', function(e) {
+      // e.target.style.color = 'red'
+      if (e.target.tagName === 'LI') {
+        e.target.style.color = 'red'
+      }
+    })
+
+    // 1.事件委托的好处是什么?
+    //    减少注册次数，提高了程序性能
+    // 2.事件委托是委托给了谁?父元素还是子元素?
+    //    父元素
+    // 3如何找到真正触发的素?
+    //    事件对象.target.tagName
+  </script>
+</body>
+
+</html>

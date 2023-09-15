@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 多分支if语法:
+    // 使用场景: 适合于有多个结果的时候，比如学习成绩可以分为: 优 良 中 差
+
+    // if (条件1) {
+    //     代码1
+    // } else if (条件2) {
+    //     代码2
+    // } else if (条件3) {
+    //     代码3
+    // } else {
+    //     代码n
+    // }
+
+    //我写的
+    // let pf = +prompt('请输入成绩')
+    // if (pf >= 90) {
+    //     alert('优秀')
+    // } else if (pf >= 70 && pf < 90) {
+    //     alert('良好')
+    // } else if (pf >= 60 && pf < 70) {
+    //     alert('及格')
+    // } else if (pf < 60) {
+    //     alert('不及格')
+    // }
+
+    //pink 这个是层级筛选
+    let pf = +prompt('请输入成绩')
+    if (pf >= 90) {
+      alert('优秀')
+    } else if (pf >= 70) {
+      alert('良好')
+    } else if (pf >= 60) {
+      alert('及格')
+    } else {
+      alert('不及格')
+    }
+  </script>
+</body>
+
+</html>

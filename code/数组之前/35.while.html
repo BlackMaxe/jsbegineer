@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // while (循环条件) {
+    //     要重复执行的代码(循环体)
+    // }
+    // 释义：
+    // 跟if语句很像，都要满足小括号里的条件为true才会进入 循环体执行代码
+    // while大括号里代码执行完毕后不会跳出，而是继续回到小括号里判断条件是否满足，
+    // 若满足又执行大括号里的代码，然后再回到小括号判断条件，直到括号内条件不满足，即跳出
+
+    // while 循环三要素:
+    // 循环的本质就是以某个变量为起始值，然后不断产生变化量，慢慢靠近终止条件的过程
+    // 所以，while循环需要具备三要素
+    // 1.变量起始值
+    // 2.终止条件(没有终止条件，循环会一直执行，造成死循环)
+    // 3.变量变化量(用自增或者自减)
+    // let i = 1
+    // while (i <= 3) {
+    //     document.write('我会循环三次<br>')
+    //     i++
+    // }
+
+    // let a = 1
+    // while (a <= 10) {
+    //     document.write(`月薪过万<br>`)
+    //     a++
+    // }
+
+
+    let a = 1
+    let b = +prompt(`请输入打印次数：`)
+    while (a <= b) {
+      document.write(`月薪过万<br>`)
+      a++
+    }
+  </script>
+</body>
+
+</html>

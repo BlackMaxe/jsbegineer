@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 变量声明有三个 var let 和 const
+    // 我们应该用那个呢?
+    // 首先var 先排除，老派写法，问题很多，可以淘汰掉...
+    // let or const ?
+    // 建议:const 优先，尽量使用const，原因是:
+    // const 语义化更好
+    // 很多变量我们声明的时候就知道他不会被更改了，那为什么不用 const呢?
+    // 实际开发中也是，比如react框架，基本const
+    // 如果你还在纠结，那么我建议:
+    // 有了变量先给const，如果发现它后面是要被修改的，再改为let
+
+    // 请问以下的 可不可以把let 改为 const?
+    // document.write('我叫' + '刘德华')
+    // let uname = '刘德华!'
+    // let song = '忘情水!'
+    // document.write(uname + song)
+
+    // let num1 = +prompt('请输入第一个数值:')
+    // let num2 = +prompt('请输入第二个数值:')
+    // alert(`两者相加的结果是:${num1 + num2}`)
+    // 可以，因为他们的值没有变过
+
+    // let num = 1
+    // num += 1
+    // console.log(num)
+
+    // for (let i = 0; i < nums.length; i++) {
+    //   document.write(num[i])
+    // }
+    // 不可以，因为变量进行了重新赋值
+
+    // let arr = ['red', 'green']
+    // arr.push('pink')
+    // console.log(arr)
+
+    // let person = {
+    //   uname: 'pink老师',
+    //   age: 18,
+    //   gender: '女'
+    // }
+    // person.address = '武汉黑马'
+    // console.log(person)
+    // 可以 你想得到吗？ 我反正想不到
+
+    // const arr = ['red', 'green']
+    // arr.push('pink')
+    // console.log(arr)
+    // const 记录的是在栈里面的地址，改变的却是在堆里面的元素
+
+    const arr = ['red', 'green']
+    arr = [1, 2, 4]
+    console.log(arr) // 这就不行了
+      // 这相当于在堆里面生成了一个新数组，而新数组会有新的地址
+
+    //以后建议数组和对象使用const来声明
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 变量有一个坑，特殊情况
+    // 如果函数内部，变量没有声明，直接赋值，也当全局变量看，但是强烈不推荐
+
+    function fn() {
+      num = 10 // 当全局变量看，但是强烈不推荐
+    }
+    fn()
+    console.log(num)
+
+    //但是有一种情况，函数内部的形参可以看做是局部变量。
+    function fun(x, y) {
+      console.log(x)
+    }
+    fun(1, 2)
+    console.log(x) // undefined
+  </script>
+</body>
+
+</html>

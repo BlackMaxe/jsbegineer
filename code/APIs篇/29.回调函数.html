@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 回调函数
+    // 目标:能够说出什么是回调函数
+    // 如果将函数 A做为参数传递给函数 B 时，我们称函数 A为回调函数
+    // 简单理解: 当一个函数当做参数来传递给另外一个函数的时候，这个函数就是回调函数
+    // 常见的使用场景:
+    function fn() {
+      console.log(`我是回调函数...`)
+    }
+    // fn传递给了setInterval,fn就是回调函数
+    setInterval(fn, 1000)
+
+    btn.addEventListener('click', function() {
+      console.log(`我也是回调函数`)
+    })
+  </script>
+</body>
+
+</html>

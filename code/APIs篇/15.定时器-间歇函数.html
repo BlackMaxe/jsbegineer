@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 目标:能够说出定时器函数在开发中的使用场景
+    // 网页中经常会需要一种功能: 每隔一段时间需要自动执行一段代码，不需要我们手动去触发
+    // 例如: 网页中的倒计时
+    // 要实现这种需求，需要定时器函数
+    // 定时器函数有两种，今天我先讲间歇函数
+
+    // 目标:能够使用定时器函数重复执行代码
+    // 定时器函数可以开启和关闭定时器
+    // 1.开启定时器
+    // setInterval(函数,间隔时间)
+    // 作用:每隔一段时间调用这个函数
+    // 间隔时间单位是毫秒
+    // setInterval(function() {
+    //   console.log(`一秒执行一次`)
+    // }, 1000)
+
+    // function fn() {
+    //   console.log(`一秒执行一次`)
+    // }
+    // setInterval(fn, 1000)
+    // setInterval('fn()', 1000)//一般不用
+
+    // 2.关闭定时器
+    // let 变量名 = setInterval(函数, 间隔时间)
+    // clearInterval(变量名)
+
+    // function fn() {
+    //   console.log(`一秒执行一次`)
+    // }
+    // let n = setInterval(fn, 1000)
+    // clearInterval(n)
+  </script>
+</body>
+
+</html>

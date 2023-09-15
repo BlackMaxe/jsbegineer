@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let num1 = prompt('请输入第一个数：')
+    console.log(typeof num1) //string
+
+    //  JavaScript是弱数据类型: Javacript也不知道变量到底属于那种数据类型，只有赋值了才清楚
+    // 坑: 使用表单、prompt 获取过来的数据默认是字符串类型的，此时就不能直接简单的进行加法运算。
+    console.log('10000' + '2000') //输出结果100002000
+
+    //隐式转换  （转换类型不明确，靠经验才能总结）
+    console.log(1 + 1)
+    console.log('pink' + 1) //他其实就是把后面的1偷偷的加了引号
+    console.log(2 + 2) //4
+    console.log(2 + '2') //22
+    console.log(2 - 2)
+    console.log(2 - '2') //0     -*/%这四个都是将字符串改成数字型
+    console.log(+12) //12
+    console.log(+'123') //123(数字类型的123)  +也能将后面的转化为数字型
+
+    //小技巧
+    //+号作为正号解析可以转换成数字型
+    //任何数据和字符串相加结果都是字符串
+    console.log(11 + 11) //22
+    console.log('11' + 11) //1111
+    console.log(11 - 11) //0
+    console.log('11' - 11) //0
+    console.log(1 * 1) //1
+    console.log('1' * 1) //1
+    console.log(typeof '123') //string
+    console.log(typeof + '123') //number
+    console.log(+'11' + 11) //22
+  </script>
+</body>
+
+</html>
