@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 目的:把要计算的数字传到函数内
+    // 声明语法
+    // function 函数名(参数列表) {
+    //     函数体
+    // }
+    // 例子
+    // function getSum(num1, num2) {
+    //     document.write(num1 + num2) 
+    // }
+
+    function getSum(strat, end) { // 形参  形式上的参数 声明函数写在函数名右边小括号里的
+      let sum = 0
+      for (let i = strat; i <= end; i++) {
+        sum += i
+      }
+      alert(sum)
+    }
+    getSum(1, 50) // 调用的小括号里面 实参 - 实际的参数 调用函数时写在函数右边小括号里的
+  </script>
+</body>
+
+</html>

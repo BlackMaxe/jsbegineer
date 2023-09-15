@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 匿名函数
+    // 目标：了解匿名函数的使用方式
+    // 具名函数 
+    // 声明: function fn() {}
+    // 调用: fn()
+
+    //匿名函数  
+    //function() {}
+
+    // 没有名字的函数，无法直接使用
+    // 使用方式
+    // 1.函数表达式  必须先声明函数表达式，后调用
+    // 将匿名函数赋值给一个变量，并且通过变量名称进行调用 我们将这个称为函数表达式
+    // let fn = function() {
+    //     //函数体
+    // }
+    // let fn = function() {
+    //     console.log(`我是函数体`)
+    // }
+    // console.log(fn)
+    let fn = function(x, y) {
+      console.log(x + y)
+    }
+    fn(1, 2) // 3
+
+    // 2.立即执行函数  必须要写分号 写前写后都一样
+    // 场景介绍: 避免全局变量之间的污染
+    // 语法：
+    //方式1
+    ;
+    (function(x, y) {
+      console.log(x + y)
+    })(1, 2);
+    //方式2
+    ;
+    (function() {
+      console.log(11)
+    }());
+    //不需要调用，立即执行
+  </script>
+</body>
+
+</html>

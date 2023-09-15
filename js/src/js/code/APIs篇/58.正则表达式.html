@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 正则表达式(Regular Expressin) 是用于匹配字符串中字符组合的模式。 在avaScript中， 正则表达式也是对象
+    // 通常用来查找、 替换那些符合正则表达式的文本， 许多语言都支持正则表达式。
+
+    // 正则表达式在JavaScript中的使用场景
+    // 例如验证表单:用户名表单只能输入英文字母、数字或者下划线，昵称输入框中可以输入中文(匹配)
+    // 比如用户名: /^[a-z0-9_-]{3,16}$/
+    // 过滤掉页面内容中的一些敏感词(替换)，或从字符串中获取我们想要的特定部分(提取)等。
+
+    // 1.定义正则表达式语法：
+    // const 变量名 = / 表达式/
+    // 其中/ /是正则表达式字面量
+
+    //正则表达式使用
+    //1.定义规则
+    //2.是否匹配
+
+    // 判断是否有符合规则的字符串:
+    // test()方法 用来查看正则表达式与指定的字符串是否匹配
+    // 语法:
+    // regObj.test(被检测的字符串
+
+    const str = '老狗老狗'
+    const reg = /老狗/
+
+    console.log(reg.test(str)) // true
+
+    // 检索(查找)符合规则的字符串:
+    // exec()方法在一个指定字符串中执行一个搜索匹配
+    // 语法:
+    // regObj.exec(被检测字符串)
+    // 如果匹配成功，exec() 方法返回一个数组，否则返回null
+    console.log(reg.exec(str)) //arr
+  </script>
+</body>
+
+</html>

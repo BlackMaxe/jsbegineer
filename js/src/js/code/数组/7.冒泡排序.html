@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let arr = [5, 4, 3, 2, 1, ]
+    //     // for (let i = 0; i < arr.length - 1; i++) {
+    //     //     for (let j = 0; j < arr.length - i - 1; j++) {
+    //     //         if (arr[j] > arr[j + 1]) {
+    //     //             let temp = arr[j]
+    //     //             arr[j] = arr[j + 1]
+    //     //             arr[j + 1] = temp
+    //     //         }
+    //     //     }
+    //     // }
+    // arr.sort() //排序
+    // console.log(arr)
+
+    // 数组排序
+    // 数组.sort() 方法可以排序
+    // 语法:
+    let arr = [4, 2, 5, 1, 3]
+      //1.升序排序写法
+    arr.sort(function(a, b) {
+      return a - b
+    })
+    console.log(arr) //[1,2,3,4,5]
+      //2.降序排序写法
+    arr.sort(function(a, b) {
+      return b - a
+    })
+    console.log(arr) //[5,4,3,2,1]
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //比较运算符的介绍
+    //使用场景:比较两个数据大小、是否相等
+    //实际运用例：京东购物时候的价格区间
+    //比较运算符：
+    // >   左边是否大于右边
+    // <   左边是否小于右边
+    // >=  左边是否大于或等于右边
+    // <=  左边是否小于或等于右边
+    // ==  左右两边值是否相等  !!!
+    // === 左右两边是否类型和值都相等 !!!
+    // !== 左右两边是否不全等
+    // 比较结果为boolean类型，即只会得到 true 或 false
+
+
+
+    console.log(3 > 5)
+    console.log(3 >= 3)
+    console.log(2 == 2)
+    console.log(2 == '2') //比较运算符有隐式转换 把'2' 转换为2 双等号 只判断值
+    console.log(2 === '2') // === 全等 判断 值 和 数据类型都一样才行
+    console.log(NaN === NaN) //false 他不等于任何人 包括他自己
+    console.log(2 !== '2')
+
+    //以后判断是否相等  请用 ===
+
+    // 对比
+    // =     单等是赋值
+    // ==    是判断
+    // ===   是全等
+    // 开发中判断是否相等，强烈推荐使用  ===
+
+    //比较运算符
+    //字符串比较，是比较的字符对应的ASCII码
+
+    console.log('a' < 'b')
+    console.log('aa' < 'ab')
+    console.log('aa' < 'aac')
+
+    // 字符串比较，是比较的字符对应的ASCII码
+    // 从左往右依次比较
+    // 如果第一位一样再比较第二位，以此类推
+    // 比较的少，了解即可
+    // NaN不等于任何值，包括它本身
+    // 涉及到"NaN“都是false
+    // 尽量不要比较小数，因为小数有精度问题
+    // 不同类型之间会发生隐式转化
+    // 最终把数据隐式转换转成number类型再比较
+    // 所以开发中，如果进行准确的比较我们更喜欢 === 或者  ！==
+  </script>
+</body>
+
+</html>

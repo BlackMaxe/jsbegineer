@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.2 一元运算符
+    // 我们可以有更简便的写法了~~~
+    // 自增:
+    // 符号:  ++
+    // 作用:让变量的值 +1
+    // 自减:
+    // 符号:  --
+    // 作用:让变量的值 -1
+    // 使用场景:经常用于计数来使用。比如进行10次操作，用它来计算进行了多少次了
+
+    // 1.前置自增 先自加再使用（记忆口诀：++在前 先加）
+    // let i = 1
+    //     ++i
+    // console.log(i)
+
+
+    // let i = 1
+    // console.log(++i + 2) //4
+    // 注意：i 是 2
+    // i先自加 1，变成2之后，在和后面的2相加
+
+    // 2.后置自增 先使用再自加（记忆口诀： ++在后 后加）
+    // let i = 1
+    //     ++i
+    // console.log(i)
+
+    let i = 1
+    console.log(i++ + 1) //2
+      // 注意:此时的之是 1
+      // 先和2相加,先运算输出完毕后，i再自加是2
+
+    // tips
+    // 1.前置自增和后置自增独立使用时二者并没有差别!
+    // 2.一般开发中我们都是独立使用（经常用于计数来使用。用来计算多少次）
+    // 3.后面i++后置增加会使用相对较多，并且都是单独使用
+  </script>
+</body>
+
+</html>

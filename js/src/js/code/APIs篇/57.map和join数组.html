@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // map 可以遍历数组处理数据，并且返回新的数组
+    const arr = ['red', 'blue', 'pink']
+    const newArr = arr.map(function(ele, index) {
+      return ele + '颜色'
+    })
+    console.log(newArr)
+
+    // join()方法用于把数组中的所有元素转换一个字符串
+    // 参数:
+    // 数组元素是通过参数里面指定的分隔符进行分隔的，空字符串('')，则所有元素之间都没有任何字符
+    console.log(arr.join('')) // redbluepink
+    console.log(arr.join()) //用逗号分割 red,blue,pink
+    console.log(arr.join('|')) //red|blue|pink
+  </script>
+</body>
+
+</html>

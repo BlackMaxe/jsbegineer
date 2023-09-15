@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // ['赵云','黄忠','关羽','张飞','马超','刘备','曹操']
+    // let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+    // let random = Math.floor(Math.random() * arr.length)
+    // console.log(arr[random])
+    //   // 3.splice(起始位置(下标),删除几个元素)
+    // arr.splice(random, 1)
+    // console.log(arr)
+
+    //改进版，点名之后会删除当前
+    let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+    for (i = 1; i < 8; i++) {
+      let random = Math.floor(Math.random() * arr.length)
+      console.log(arr[random])
+        // 3.splice(起始位置(下标),删除几个元素)
+      arr.splice(random, 1)
+      console.log(arr)
+    }
+  </script>
+</body>
+
+</html>

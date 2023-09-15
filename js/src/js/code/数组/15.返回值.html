@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 函数返回值
+    // 提问:什么是函数?
+    // 函数是被设计为执行特定任务的代码块
+    // 提问:执行完特定任务之后，然后呢?
+    // 把任务的结果给我们
+    // 缺点:把计算后的结果处理方式写死了，内部处理了
+    // 解决:把处理结果返回给调用者
+    // 有返回值函数的概念:
+    // 当调用某个函数，这个函数会返回一个结果出来
+    // 这就是有返回值的函数
+    // 其实我们前面已经接触了很多的函数具备返回值
+    // let result = prompt('请输入你的年龄?')
+    // let result2 = parseInt('111')
+    // 只是这些函数是jS底层内置的.我们直接就可以使用
+    // 当然有些函数，则没有返回值
+    // alert(`我是弹框，不需要返回值`)
+    // 所以要根据需求，来设定需不需要返回值
+
+    function fn() {
+      return 20
+    }
+    let re = fn()
+    console.log(re)
+
+    // 求和函数的写法
+    function getTotalPrice(x, y) {
+      return (x + y)
+    }
+    let sum = getTotalPrice(1, 2)
+    console.log(sum)
+
+    // 细节
+    // 在函数体中使用 return 关键字能将内部的执行结果交给函数外部使用
+    // return 后面代码不会再被执行，会立即结束当前函数，所以return 后面的数据不要换行写
+    // return函数可以没有 return，这种情况函数默认返回值为 undefined
+
+    // 为什么要让函数有返回值
+    // 函数执行后得到结果，结果是调用者想要拿到的(一句话，函数内部不需
+    // 要输出结果，而是返回结果)
+    // 对执行结果的扩展性更高,可以让其他的程序使用这个结果
+
+    // 函数有返回值用那个关键字? 有什么注意事项呢?
+    // 语法:return 数据
+    // return后面尔接数据或者函数内不写return，函数的返回值是undefined
+    // return能立即结束当前函数，所以return 后面的数据不要换行写
+
+    // 函数细节补充
+    // 两个相同的函数后面的会覆盖前面的函数
+    // 在Javascript中实参的个数和形参的个数可以不一致
+
+    function fn(a, b) {
+      console.log(a + b)
+    }
+    // 如果形参过多 会自动填上undefined(了解即可)
+    fn(1, 2, 3) // 3 和  false undefined
+
+    // 如果实参过多那么多余的实参会被忽略(函数内部有一个arguments,里面装着所有的实参)
+    fn(1) // NaN  1 + undefined = NaN
+
+    // 函数一旦碰到return就不会在往下执行了数的结束用return
+
+    // break的结束和return结束有什么区别 ?
+    // break 结束的是循环 （if switch）    return结束的是函数
+  </script>
+</body>
+
+</html>

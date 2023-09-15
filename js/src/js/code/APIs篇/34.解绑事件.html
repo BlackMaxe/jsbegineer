@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>点击</button>
+  <script>
+    const btn = document.querySelector('button')
+      // btn.onclick = function() {
+      //     alert('点击了')
+      //   }
+      //L0 事件移除解绑
+      // btn.onclick = null
+
+    // btn.addEventListener('click', function() {
+    //     alert('点击了')
+    //   })
+    // addEventListener方式，必须使用
+    // removeEventListener(事件类型,事件处理函数，[获取捕获或者冒泡阶段])
+    // 例如:
+    function fn() {
+      alert('点击了')
+    }
+    // 绑定事件
+    btn.addEventListener('click', fn)
+      // 解绑事件
+    btn.removeEventListener('click', fn)
+    注意: 匿名函数无法被解绑
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 依托答辩
+    // let random = Math.floor(Math.random() * (10 + 1))
+    // let number = +prompt(`请输入一个数字`)
+
+    // let x = 0
+    // if (random < number) {
+    //   alert(`数字猜大了，继续猜`)
+    //   number + prompt(`继续猜！`)
+    // } else if (random > number) {
+    //   alert(`数字猜小了，继续猜`)
+    //   number + prompt(`继续猜！`)
+    // } else {
+    //   x = 1
+    // }
+
+    // 正文  for适用于明确次数的循环  while适用于无限循环
+    function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }
+    let random = getRandom(1, 10)
+
+    while (true) {
+      let number = +prompt(`请输入一个数字`)
+      if (random < number) {
+        alert(`数字猜大了，继续猜`)
+      } else if (random > number) {
+        alert(`数字猜小了，继续猜`)
+      } else {
+        alert(`您猜对了！`)
+        break
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    //  老狗写法 我觉得很完美好吧
+    // function calculateTime() {
+    //     let time = +prompt(`请输入总的秒数：`)
+    //     let hour = 0
+    //     let minute = 0
+    //     let second = 0
+    //     hour = parseInt(time / 3600)
+    //     minute = parseInt(time / 60)
+    //     second = time - hour * 3600 - minute * 60
+    //     hour = hour < 10 ? '0' + hour : hour
+    //     minute = minute < 10 ? '0' + minute : minute
+    //     second = second < 10 ? '0' + second : second
+    //     document.write(`计算后的时间是${hour}小时${minute}分${second}秒`)
+    //     return [hour, minute, second]
+    // }
+    // calculateTime()
+
+    // 好吧 我错了 我是个fw 要余数的
+    // 计算公式: 计算时分秒小时: h= parselnt(总秒数/60 /60%24)
+    // 分钟: m = parselnt(总秒数 /60 %60)
+    // 秒数: s = parselnt(总秒数 %60)
+
+    // pink 写法
+    let second = +prompt(`请输入秒数：`)
+
+    function getTime(t) {
+      let h = parseInt(t / 60 / 60 % 24)
+      let m = parseInt(t / 60 % 60)
+      let s = parseInt(t % 60)
+      h = h < 10 ? '0' + h : h
+      m = m < 10 ? '0' + m : m
+      s = s < 10 ? '0' + s : s
+        // console.log(h, m, s)
+      return `转换完毕之后是${h}小时${m}分${s}秒`
+    }
+    let str = getTime(second)
+    document.write(str)
+  </script>
+</body>
+
+</html>

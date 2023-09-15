@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 通过单引号('')、双引号("")或反引号(`)包裹的数据都叫字符串，单引号和双引号没有本质上的区别，推荐使用单引号。
+    let str = 'pink'
+    let str1 = "pink"
+    let str2 = `中文`
+    let tel = '12312413256234' //他其实也是一个字符串、
+    let str3 = '' //这种情况叫空字符串
+    console.log(str2)
+    console.log('轻尘"基情"满满') //引号总是成对出现的，他会找距离最近的成双成对（真TM麻烦）
+    console.log('轻尘\'基情\'满满'); // \转义符，让其后面的符号的效果失效
+    /*
+    1.无论单引号或是双引号必须成对使用
+    2.单引号/双引号可以互相嵌套，但是不以自已嵌套自已 (口诀: 外双内单，或者外单内双)
+    3.必要时可以使用转义符\ ，输出单引号或双引号
+    */
+
+    // +运算符 可以实现字符串的拼接 （数字相加，字符相连）
+    document.write('我叫' + '刘德华') //我叫刘德华
+    let uname = '刘德华'
+    let song = '忘情水'
+    document.write(uname + song) //刘德华忘情水
+
+    let age = 19
+    document.write('我今年' + age + '岁了')
+  </script>
+</body>
+
+</html>

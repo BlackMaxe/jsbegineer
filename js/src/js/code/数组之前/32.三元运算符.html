@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //适用场景:其实是比 if 双分支 更简单的写法，可以使用 三元表达式
+    //符号: ? 与 : 配合使用
+    //语法：
+    // 条件?满足条件的执行代码:不满足条件的执行代码
+    //一般用来取值
+    // if (3 < 5) {
+    //     alert('真的')
+    // } else {
+    //     alert('假的')
+    // }
+    // 3 < 5 ? alert('真的') : alert('假的')
+    let a = +prompt('请输入第一个数：')
+    let b = +prompt('请输入第二个数：')
+    a < b ? alert(`${b}是最大值`) : alert(`${a}是最大值`)
+  </script>
+</body>
+
+</html>

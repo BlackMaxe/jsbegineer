@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 对象中的方法
+    // 数据行为性的信息称为方法，如跑步、唱歌等，一般是动词性的，其本质是函数。
+    // let person = {
+    //   name: 'andy',
+    //   sayHi: function() {
+    //     document.write('hi~~~')
+    //   }
+    // }
+
+    // 1.方法是由方法名和函数两部分构成，它们之间使用 : 分隔
+    // 2.多个属性之间使用英文，分隔
+    // 3.方法是依附在对象中的函数
+    // 4.方法名可以使用""或''，一般情况下省略，除非名称遇到特殊符号如空格、中横线等
+
+    // 对象中的方法
+    // 声明对象，并添加了若千方法后，可以使用.调用对象中函数，我称之为方法调用
+    // 也可以添加形参和实参
+    // 注意: 千万别忘了给方法名后面加小括号
+    let obj = {
+      uname: 'black',
+      song: function(x, y) {
+        // console.log('你猜')
+        console.log(x + y)
+      }
+    }
+    console.log(obj.song(1, 2)) //undefined  没有return
+    obj.song(1, 2) //3
+  </script>
+</body>
+
+</html>

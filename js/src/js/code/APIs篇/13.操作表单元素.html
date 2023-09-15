@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <input type="text" value="123"> -->
+  <input type="checkbox" name="" id="">
+  <button disabled>点我</button>
+  <script>
+    //      操作表单元素 属性
+    // 表单很多情况，也需要修改属性，比如点击眼睛，可以看到密码，本质是把表单类型转换为文本框
+    // 正常的有属性有取值的 跟其他的标签属性没有任何区别
+    // 获取:DOM对象.属性名
+    // 设置:DOM对象.属性名=新值
+    // const uname = document.querySelector('input')
+    // console.log(uname.value) // 123
+    // console.log(uname.innerHTML) // innerHTML 得不到表单的内容
+
+    // 表单属性中添加就有效果,移除就没有效果，一律使用布尔值表示 
+    // 如果为true 代表添加了该属性 如果是false 代表移除了该属性
+    // 比如: disabled、checked、selected
+    const ipt = document.querySelector('input')
+    ipt.checked = true
+    const button = document.querySelector('button')
+    button.disabled = true //默认false 不禁用
+  </script>
+</body>
+
+</html>

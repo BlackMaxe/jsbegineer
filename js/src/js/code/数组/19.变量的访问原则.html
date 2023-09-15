@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 变量的访问原则
+    // 只要是代码，就至少有一个作用域
+    // 写在函数内部的局部作用域
+    // 如果函数中还有函数，那么在这个作用域中就又可以诞生一个作用域。
+
+    // 访问原则:在能够访问到的情况下 先局部， 局部没有在找全局
+
+    let num = 10
+
+    function fn() {
+      let num = 20
+
+      function fun() {
+        // let num = 30
+        console.log(num)
+      }
+      fun()
+    }
+    fn()
+  </script>
+</body>
+
+</html>

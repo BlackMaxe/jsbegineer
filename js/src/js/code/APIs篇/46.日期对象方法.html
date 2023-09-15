@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      height: 50px;
+      width: 300px;
+      background-color: pink;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    // 目标:能够使用日期对象中的方法写出常见日期
+    // 使用场景:因为日期对象返回的数据我们不能直接使用，所以需要转换为实际开发中常用的格式
+
+    //     方法               作用                          说明                              
+    // getFullYear()        获得年份                     获取四位年份                             
+    // getMonth()           获得月份                     取值为 0~11       要加一                        
+    // getDate()            获取月份中的每一天           不同月份取值也不相同                                                 
+    // getDay()             获取星期                     取值为 0~6        0是周日                   
+    // getHours()           获取小时                     取值为0~23                                                 
+    // getMinutes()         获取分钟                     取值为0~59                                          
+    // getSeconds()         获取秒                       取值为0~59
+
+    const div = document.querySelector('div')
+
+    // function getMyDate() {
+    //   const date = new Date()
+    //   let h = date.getHours()
+    //   let m = date.getMinutes()
+    //   let s = date.getSeconds()
+    //   h = h < 10 ? '0' + h : h
+    //   m = m < 10 ? '0' + m : m
+    //   s = s < 10 ? '0' + s : s
+    //   return `今天是：${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}号${h}:${m}:${s}`
+    // }
+    // div.innerHTML = getMyDate()
+    // setInterval(function() {
+    //   div.innerHTML = getMyDate()
+    // })
+
+    const date = new Date()
+      // div.innerHTML = date.toLocaleString() //2023/6/22 16:42:30
+      // div.innerHTML = date.toLocaleDateString() //2023/6/22
+    div.innerHTML = date.toLocaleTimeString() //16:44:04
+  </script>
+</body>
+
+</html>

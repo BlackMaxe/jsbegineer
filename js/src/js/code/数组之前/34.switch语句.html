@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 释义:
+    // 找到跟小括号里数据全等的case值，并执行里面对应的代码
+    // 若没有全等===的则执行default里的代码
+    // 例:数据若跟值2全等，则执行代码2
+
+    // switch (数据) {
+    //     case 值1:
+    //         代码1
+    //         break;
+    //     case 值2:
+    //         代码2
+    //         break
+    //     default:
+    //         代码n 
+    // }
+
+    // 1.switch case语句一般用于等值判断,不适合于区间判断
+    // 2.switch case一般需要配合break关键字使用 没有break会造成case穿透
+
+    let a = +prompt('请输入第一个数字：')
+    let b = +prompt('请输入第二个数字：')
+    let sp = prompt('请输入运算符：')
+    switch (sp) {
+      case '+':
+        alert(`${a}+${b}=${a+b}`)
+        break;
+      case '-':
+        alert(`${a}-${b}=${a-b}`)
+        break;
+      case '*':
+        alert(`${a}*${b}=${a*b}`)
+        break;
+      case '/':
+        alert(`${a}/${b}=${a/b}`)
+        break;
+      default:
+        alert('没有该运算符')
+        break;
+    }
+  </script>
+</body>
+
+</html>

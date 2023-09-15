@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getSum(num1, num2) {
+
+      alert(num1 + num2)
+    }
+    // let x = +prompt('请输入第一个数')
+    // let y = +prompt('请输入第二个数')
+    // getSum(x, y)
+    getSum() // NaN
+
+    // 函数传参-参数默认值
+    // 形参: 可以看做变量，但是如果一个变量不给值，默认是什么?
+    // undefined
+    // 但是如果做用户不输入实参，刚才的案例，则出现 undefined +undefined 结果是什么?
+    // NaN
+    // 我们可以改进下，用户不输入实参，可以给 形参默认值，可以默认为 0,这样程序更严谨，可以如下操作:
+    function getSum1(x = 0, y = 0) {
+      document.write(x + y)
+    }
+    getSum1() // 0 而不是NaN
+    getSum1(1, 2) // 3
+  </script>
+</body>
+
+</html>

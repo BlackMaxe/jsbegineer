@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box">我是文字内容</div>
+  <script>
+    // 目标:能够修改元素的文本更换内容
+    // DOM对象都是根据标签生成的,所以操作标签本质上就是操作DOM对象
+    // 就是操作对象使用的点语法
+    // 如果想要修改标签元素的里面的内容，则可以使用如下几种方式
+    // 学习路径:
+    // 1.对象innerText属性
+    // 2.对象innerHTML属性
+
+    const box = document.querySelector('.box')
+    console.log(box.innerText)
+      // box.innerText = '我是老狗'
+      // box.innerText = '<strong>我是老狗</strong>'
+      // 元素innerText 属性
+      // 将文本内容添加/更新到任意标签位节
+      // 显示纯文本，不解析标签
+
+    // 元素.innerHTML 属性
+    // 将文本内容添加/更新到任意标签位置
+    // 会解析标签，多标签建议使用模板字符
+    box.innerHTML = '<strong>我是老狗</strong>'
+  </script>
+</body>
+
+</html>

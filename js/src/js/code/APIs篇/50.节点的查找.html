@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="yeye">
+    <div class="dad">
+      <div class="son">x</div>
+    </div>
+  </div>
+  <ul>
+    <li>
+      1
+    </li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+  <script>
+    // 查找节点
+    // 目标：能够具备根据节点关系查找目标节点的能力
+    // 关闭二维码案例
+    //  点击关闭按钮，关闭的是二维码的盒子,还要获取erweima盒子
+    //  思考
+    //  关闭按钮 和 erweima是什么关系？
+    //  父子关系
+    //  所以，我们完全可以这样做：
+    //  点击关闭按钮，直接关闭它的爸爸，就无需获取erweima元素了
+    // 节点关系：针对的找亲戚返回的都是对象
+    //  父节点
+    //  子节点
+    //  兄弟节点
+
+    // 父节点查找
+    // parentNode 属性
+    // 返回最近一级的父节点 找不到返回为null
+    // 子元素.parentNode
+    // const son = document.querySelector('.son')
+    // console.log(son)
+    // console.log(son.parentNode) //dad
+    // console.log(son.parentNode.parentNode) //yeye
+
+    // 子节点查找
+    // childNodes
+    //  获得所有子节点、包括文本节点(空格、换行)、注释节点等
+    // children属性(重点)
+    //  仅获得所有元素节点
+    //  返回的还是一个伪数组
+    // 父元素.children
+    // const ul = document.querySelector('ul')
+    // console.log(ul.children) //得到的是伪数组 选择的是亲儿子
+
+    // 兄弟关系查找
+    // 1.下一个兄弟节点
+    // nextElementSibling属性
+    // 2.上一个兄弟节点
+    // previousElementSibling属性
+    // const li2 = document.querySelector('ul li:nth-child(2)')
+    // console.log(li2.previousElementSibling)
+    // console.log(li2.nextElementSibling)
+  </script>
+</body>
+
+</html>

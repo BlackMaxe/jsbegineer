@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 对象本质是无序的数据集合,操作数据无非就是增删改查语法
+    // 查
+    // 查询对象
+    // 对象.属性
+
+    // 改
+    // 重新赋值
+    // 对象.属性 = 值
+
+    // 增
+    // 对象增添新的数据
+    // 对象名.新属性名 = 新值
+
+    // 删
+    // 删掉对象中属性
+    // delete 对象名.属性名
+
+    let obj = {
+      "goods-name": '小米', //商品对象名字 用引号包起来
+      name: '小米10 青春版', //商品名称命名为
+      num: `100012816024`, //商品编号
+      weight: `0.59kg`, // 商品毛重
+      address: `中国大陆`, // 商品产地
+    }
+    console.log(obj.address)
+    obj.address = `中国台湾`
+    console.log(obj.address)
+    obj.length = '100km'
+    console.log(obj)
+    delete obj.weight
+    console.log(obj)
+
+    // 查的另外一种语法
+    // 对象名["属性名"]
+    obj["goods-name"]
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 转换为Boolean型
+    // 显示转换:
+    // 1.Boolean(内容)
+    // 记忆:”、0、undefined、null、false、NaN 转换为布尔值后都是false, 其余则为 true
+    console.log(false && 20) // false
+    console.log(5 < 3 && 20) // flase
+    console.log(undefined && 20) // undefined
+    console.log(null && 20) //null
+    console.log(0 && 20) // 0
+    console.log(10 && 20) // 20
+
+    console.log(false || 20) //20
+    console.log(5 < 3 || 20) // 20
+    console.log(undefined || 20) // 20
+    console.log(null || 20) // 20
+    console.log(0 || 20) // 20
+    console.log(10 || 20) // 10
+
+    // 隐式转换:
+    // 1.有字符串的加法""+1，结果是 "1"
+    // 2.减法- (像大多数数学运算一样)只能用于数字，它会使空字符串""转换为 0
+    // 3.null 经过数字转换之后会变为 0
+    // 4.undefined 经过数宇转换之后会变为 NaN
+    console.log('' - 1) // -1
+    console.log('pink' - 1) // NaN
+    console.log(null + 1) // 1 
+    console.log(undefined + 1) // NaN
+    console.log(NaN + 1) // NaN
+  </script>
+</body>
+
+</html>
